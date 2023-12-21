@@ -11,7 +11,4 @@ PRODUCT_MAKEFILES := \
 COMMON_LUNCH_CHOICES := \
 	lineage_leo-user \
 	lineage_leo-userdebug \
-	lineage_leo-eng \
-    twrp_leo-user \
-    twrp_leo-userdebug \
-    twrp_leo-eng
+	lineage_leo-eng
