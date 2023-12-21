@@ -9,6 +9,9 @@ PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/twrp_leo.mk
 
 COMMON_LUNCH_CHOICES := \
+	lineage_leo-user \
+	lineage_leo-userdebug \
+	lineage_leo-eng \
     twrp_leo-user \
     twrp_leo-userdebug \
     twrp_leo-eng
