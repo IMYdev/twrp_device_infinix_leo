@@ -6,7 +6,7 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/twrp_leo.mk
+    $(LOCAL_DIR)/lineage_leo.mk
 
 COMMON_LUNCH_CHOICES := \
 	lineage_leo-user \
