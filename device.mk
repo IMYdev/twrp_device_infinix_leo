@@ -42,6 +42,14 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
 # Dynamic Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
+# Screen density
+PRODUCT AAPT_CONFIG := normal
+PRODUCT_AAPT_PREF_CONFIG := xhdpi
+
+# Boot animation
+TARGET_SCREEN_HEIGHT := 1640
+TARGET SCREEN_WIDTH := 720
+
 # VNDK
 PRODUCT_TARGET_VNDK_VERSION := 30
 
