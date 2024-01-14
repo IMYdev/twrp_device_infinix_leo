@@ -1,5 +1,6 @@
 on init
     export LD_LIBRARY_PATH /system/lib64:/vendor/lib64:/vendor/lib64/hw:/system/lib64/hw
+    insmod /vendor/lib/modules/adaptive-ts.ko
 
 on post-fs
     # Support A/B feature for EMMC boot region
