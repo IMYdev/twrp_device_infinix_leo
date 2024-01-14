@@ -21,5 +21,5 @@ $(call inherit-product, vendor/twrp/config/common.mk)
 PRODUCT_DEVICE := leo
 PRODUCT_NAME := twrp_leo
 PRODUCT_BRAND := Infinix
-PRODUCT_MODEL := Infinix HOT 12 Play NFC
+PRODUCT_MODEL := HOT 12 Play NFC
 PRODUCT_MANUFACTURER := infinix
