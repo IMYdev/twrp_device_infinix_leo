@@ -35,7 +35,9 @@ service keystore /system/bin/keystore /tmp/misc/keystore
     disabled
     seclabel u:r:recovery:s0
 
-service keymaster-4-0 /system/bin/android.hardware.keymaster@4.1-unisoc.service
+service keymaster-4-1 /system/bin/android.hardware.keymaster@4.1-unisoc.service
+    interface android.hardware.keymaster@4.0::IKeymasterDevice default
+    interface android.hardware.keymaster@4.1::IKeymasterDevice default
     user root
     group root drmrpc
     disabled
@@ -49,23 +51,23 @@ service gatekeeper-1-0 /system/bin/android.hardware.gatekeeper@1.0-service.trust
     seclabel u:r:recovery:s0
     
 on property:vendor.sys.listener.registered=true
-    start keymaster-4-0
+    start keymaster-4-1
     start gatekeeper-1-0
 
 on property:hwservicemanager.ready=true
-    start keymaster-4-0
+    start keymaster-4-1
     start gatekeeper-1-0
 
 on property:ro.crypto.state=unsupported
-    stop keymaster-4-0
+    stop keymaster-4-1
     stop gatekeeper-1-0
 
 on property:ro.crypto.state=unencrypted
-    stop keymaster-4-0
+    stop keymaster-4-1
     stop gatekeeper-1-0
 
 on property:twrp.decrypt.done=true
-    stop keymaster-4-0
+    stop keymaster-4-1
     stop gatekeeper-1-0
 
 on boot
